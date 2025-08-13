@@ -5,8 +5,8 @@ using UnityEngine;
 public class Obstacles : MonoBehaviour
 {
     [SerializeField] private float movingamount;
-    [SerializeField] private float minPos;
-    [SerializeField] private float maxPos;
+    private float minPos;
+    private float maxPos;
     [SerializeField] private float movingSpeed;
     [SerializeField] private float minSpeed;
     [SerializeField] private float maxSpeed;
