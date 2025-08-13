@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public interface IInteractable
 {
     public string GetInteractPrompt(); // UI에 넘겨줄 string 값
