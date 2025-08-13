@@ -19,14 +19,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float lookSensitivity = 10f;
     [SerializeField] float maxRotate = 85f;
     [SerializeField] float minRotate = -85f;
-    [SerializeField] Camera main;
-    [SerializeField] Camera sub;
 
     [Header("레이어마스크")]
     public LayerMask groundLayerMask;
 
+
+    CameraChanger cam;
     private bool isRun;
-    private bool isPersonal = true;
     public event Action<float> useStamina;
     private float cameraRotate;
     private Vector2 curMovementInput;
@@ -42,6 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         condi = GetComponent<Player_Condition>();
+        cam = GetComponentInChildren<CameraChanger>();
 
         originalSpeed = Movespeed;
         originalJumpforce = jumpForce;
@@ -162,9 +162,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started)
         {
-            isPersonal = !isPersonal;
-            main.enabled = !isPersonal;
-            sub.enabled = isPersonal;
+            cam.CameraChange();
         }
     }
 

@@ -977,6 +977,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1301785482}
+  - component: {fileID: 1301785483}
   m_Layer: 0
   m_Name: Camara_Contains
   m_TagString: Untagged
@@ -1001,6 +1002,20 @@ Transform:
   - {fileID: 1145896919}
   m_Father: {fileID: 1543206406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1301785483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301785481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9641e771bbeb33a4c9da5e1b186ea8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainCam: {fileID: 956264828}
+  SubCam: {fileID: 1145896920}
 --- !u!64 &1363204529
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1388,8 +1403,6 @@ MonoBehaviour:
   lookSensitivity: 0.2
   maxRotate: 85
   minRotate: -85
-  main: {fileID: 956264828}
-  sub: {fileID: 1145896920}
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 8
