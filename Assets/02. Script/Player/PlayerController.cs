@@ -178,7 +178,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator speedBuffCoroutine(float amount, float duration)
     {
-        Movespeed += amount;
+        Movespeed = amount;
 
         yield return new WaitForSeconds(duration);
 
@@ -200,7 +200,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator JumpBuffCoroutine(float amount, float duration)
     {
-        jumpForce += amount;
+        jumpForce = amount;
         yield return new WaitForSeconds(duration);
         jumpForce = originalJumpforce;
         jumpBuff = null;

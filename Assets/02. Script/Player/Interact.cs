@@ -22,15 +22,19 @@ public class Interact : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time - lastCheckTime < checkRate)
+        
+        if (Time.time - lastCheckTime > checkRate)
         {
             lastCheckTime = Time.time;
 
             Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
             RaycastHit hit;
 
+            Debug.DrawRay(ray.origin, ray.direction * maxRayDistance, Color.red);
+
             if (Physics.Raycast(ray, out hit, maxRayDistance, layerMask))
             {
+
                 if (hit.collider.gameObject != curInteractGameObject)
                 {
                     curInteractGameObject = hit.collider.gameObject;

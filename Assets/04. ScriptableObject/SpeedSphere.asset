@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: SpeedSphere
   m_EditorClassIdentifier: 
   displayName: Speed
+  ItemDescription: SpeedUp by 5 Seconds
   type: 1
   infinity: 1
   isInterableObject: 0
   consumables:
   - type: 1
-    value: 5
+    value: 10
   duration: 10

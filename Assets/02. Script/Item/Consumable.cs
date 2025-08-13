@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -20,5 +21,25 @@ public class Consumable : ItemObject
     private void FixedUpdate()
     {
         transform.Rotate(0, 0.2f, 0);
+    }
+
+    public override void Oninteract()
+    {
+        base.Oninteract();
+
+        StartCoroutine(Eat());
+    }
+
+    IEnumerator Eat()
+    {
+        GetComponent<Collider>().enabled = false;
+
+        GetComponent<MeshRenderer>().enabled = false;
+
+        yield return new WaitForSeconds(1.5f);
+
+        GetComponent<Collider>().enabled = true;
+
+        GetComponent<MeshRenderer>().enabled = true;
     }
 }

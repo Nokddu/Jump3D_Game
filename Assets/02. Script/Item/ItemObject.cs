@@ -11,13 +11,12 @@ public class ItemObject : MonoBehaviour , IInteractable
 
     public string GetInteractPrompt()
     {
-        string str = $"{itemData.displayName}";
+        string str = $"{itemData.ItemDescription}";
         return str;
     }
 
-    public void Oninteract()
+    public virtual void Oninteract()
     {
         Character_Manager.Instance.Player.itemData = itemData;
-        Destroy(gameObject);
     }
 }

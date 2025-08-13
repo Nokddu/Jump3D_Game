@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: StamniaSphere
   m_EditorClassIdentifier: 
   displayName: Stamina
+  ItemDescription: Heal Stamina
   type: 1
   infinity: 1
   isInterableObject: 0

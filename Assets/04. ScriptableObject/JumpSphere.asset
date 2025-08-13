@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: JumpSphere
   m_EditorClassIdentifier: 
   displayName: Jump
+  ItemDescription: JumpUp By 5 Sseconds
   type: 1
   infinity: 0
   isInterableObject: 0
   consumables:
   - type: 2
-    value: 10
-  duration: 3
+    value: 15
+  duration: 5

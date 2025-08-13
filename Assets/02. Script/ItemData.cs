@@ -26,6 +26,7 @@ public class ItemData : ScriptableObject
 {
     [Header("Info")]
     public string displayName;
+    public string ItemDescription;
     public ItemType type;
 
     [Header("Infinity")]
